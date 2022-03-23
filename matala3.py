@@ -20,9 +20,10 @@ def  read_line(n, file):
         if count == n:
             return(line)
         
-    if n > count:
+    if n > count or n < 1:
         num = str(n)
         return("line " + num + " doesn't exist")
+    
 
 #B:
 
@@ -46,4 +47,7 @@ def longest_words(file):
     lst = sorted(counts.items(), key=lambda x: x[1], reverse=True)       
     for val, key in lst[:5]:
         lst_result.append(val)
-    return(lst_result)         
+    return(lst_result) 
+
+
+        
